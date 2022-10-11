@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGameShelf</title>
+    <link rel="shortcut icon" href="img/icon.ico" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="transition.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <audio id="awakeSound" autoplay>
+        <source src="awake.ogg" type="audio/ogg">
+        <source src="awake.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="transition transition-1 is-active"></div>
+
+
+
+    <div class="signin-container gradient-border">
+        <div class="image-wrap">
+            <img src="img/icon.png" alt="">
+        </div>
+        <h3 class="title" id="title">Experience the gaming life with us</h3>
+        <h5 class="title" id="title">Register now!</h5>
+        <p id="backend-error"></p>
+        <div class="signin-data-container">
+            <div class="signin-data-container1">
+                <form class="input_container">
+                    <input class="o-input" type="text" name="name" id="name" required />
+                    <label for="name" class="input-label">Név *</label>
+                    <p class="invalid-input" id="empty-name"></p>
+                </form>
+                <form class="input_container">
+                    <input class="o-input" type="tel" name="phone" id="phone" required />
+                    <label unselectable="on" onselectstart="return false;" for="phone" class="input-label">Telefonszám *<span
+                            class="c-input-with-label__additional-label l-throw-on-mobile"></span></label>
+                    <p class="invalid-input" id="invalid-phone">Hibás telefonszám! Próbáld meg ilyen formában megadni: +36203176914</p>
+                    <p class="invalid-input" id="empty-phone"></p>
+                </form>
+                <form class="input_container">
+                    <input class="o-input" type="email" name="email" id="email" id="email" required />
+                    <label unselectable="on" onselectstart="return false;" for="email" class="input-label">E-mail cím *</label>
+                    <p class="invalid-input" id="invalid-email">Hibás e-mail cím! Próbáld meg ilyen formában megadni: valaki@kiszolgalo.hu</p>
+                    <p class="invalid-input" id="empty-email"></p>
+                </form>
+                <form class="input_container">
+                    <input class="o-input o-input--password" type="password" name="password" id="password" required />
+                    <label unselectable="on" onselectstart="return false;" for="password" class="input-label">Jelszó *</label>
+                    <p class="invalid-input" id="invalid-pwd">A jelszónak 6 karakterből kell állnia, kell bele szám és kis és nagybetű!</p>
+                    <p class="invalid-input" id="empty-pwd"></p>
+                </form>
+                <form class="input_container">
+                    <input class="o-input o-input--password" type="password" name="password" id="password2" required />
+                    <label unselectable="on" onselectstart="return false;" for="password2" class="input-label">Jelszó újra *</label>
+                    <p class="invalid-input" id="invalid-pwd2">Meg kell egyeznie a jelszóval!</p>
+                    <p class="invalid-input" id="empty-pwd2"></p>
+                </form>
+            </div>
+
+            <div class="signin-data-container2">
+                    <form class="input_container">
+                        <input class="o-input" name="zip" id="zip" value="" required />
+                        <label unselectable="on" onselectstart="return false;" for="zip" class="input-label">Ir.szám *</label>
+                        <p class="invalid-input" id="invalid-zip">Az irányító számnak 4 számból kell állnia!</p>
+                        <p class="invalid-input" id="empty-zip"></p>
+                    </form>
+                    <form class="input_container c-registration__city-select">
+                        <input class="o-input citySelector ui-autocomplete-input" type="text" name="city" id="city" autocomplete="off" required />
+                        <label unselectable="on" onselectstart="return false;" for="city" class="input-label">Település *<span
+                                class="c-input-with-label__additional-label l-throw-on-mobile"></span></label>
+                        <p class="invalid-input" id="empty-city"></p>
+
+                    </form>
+                <form class="input_container">
+                    <input class="o-input" type="text" name="street" id="street"
+                        value="" data-source="/front/address/street-list" autocomplete="off" required />
+                    <label unselectable="on" onselectstart="return false;" for="street" class="input-label">Utca *<span
+                            class="c-input-with-label__additional-label l-throw-on-mobile" style="font-size:10px ;"> (Ide csak utcanevet
+                            írj!)</span></label>
+                    <p class="invalid-input" id="empty-street"></p>
+                </form>
+                    <form class="input_container">
+                        <input class="o-input" type="text" name="streetnumber" id="streetNumber" required />
+                        <label unselectable="on" onselectstart="return false;" for="streetNumber" class="input-label">Házszám *</label>
+                        <p class="invalid-input" id="empty-streetNumber"></p>
+                    </form>
+                    <div class="input_container">
+                        <input class="o-input" type="text" name="floor" id="FloorAndDoor">
+                        <label unselectable="on" onselectstart="return false;" for="floor" class="input-label">Emelet/ajtó</label>
+
+                    </div>
+            </div>
+        </div>
+        <button class="signin-button" id="signin-button" type="submit">Regisztráció</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script ype="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="labelStay.js"></script>
+    <script src="transition.js"></script>
+</body>
+
+</html>

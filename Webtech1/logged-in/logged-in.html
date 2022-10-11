@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGameShelf</title>
+    <link rel="stylesheet" href="logged-in.css">
+    <link rel="shortcut icon" href="../img/icon.ico" />
+</head>
+
+<body id="top">
+    <div class="banner">
+        <a href="#top"><img id="up-scroll" src="../img/up-arrow.png" alt="Up"></a>
+    </div>
+
+    <div class="main-container">
+        <p class="storeInfo-text">Fontos, hogy megbízható forrástól vegyük a játékainkat, hiszen rengeteg átverés fenyeget az online világban</p>
+        <table class="center">
+            <tr class="tableFirstLine">
+                <th>Forrás</th>
+                <th>Ismertetés</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://store.steampowered.com" tabindex="1">Steam</a></th>
+                <th>A Steam egy tartalomtovábbító és -kezelő rendszer, amelyet a Valve Software fejlesztett ki. Funkciói különféle számítógépes szoftverek (túlnyomórészt játékok) digitális áruházi rendszerben történő értékesítése, többjátékos módok menedzselése, és közösségépítő háló fenntartása.</th>
+            </tr>
+             <tr class="tableLines">
+                <th><a href="https://www.g2a.com" tabindex="1">G2A</a></th>
+                <th>A G2A.COM a játékosok és geekek legnagyobb piaca. A legújabb AAA-kiadásoktól, a legjobb indie játékoktól és minden idők klasszikusaitól kezdve mindent megtalál, amire szüksége van.</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://www.humblebundle.com" tabindex="1">Humble Bundle</a></th>
+                <th>A Humble Indie Bundle egy olyan kezdeményezés, melynek során független fejlesztésű (indie) videójátékokból összeállított csomagokat digitális másolásvédelmi eljárás nélkül, több platformra (Windows, Linux, Mac OS X, később pedig az Android is felkerült a támogatott operációs rendszerek közé) kínálják annyiért, amennyit a felhasználó hajlandó fizetni érte.</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://store.epicgames.com" tabindex="1">Epic Games</a></th>
+                <th>Az Epic Games (korábban Epic MegaGames) számítógépes játékok fejlesztésével foglalkozó cég.</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://ubisoftconnect.com" tabindex="1">Ubisoft</a></th>
+                <th>A Ubisoft Entertainment (eredetileg: Ubi Soft) egy számítógépes és videójátékokat kiadó és fejlesztő cég.</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://eu.shop.battle.net" tabindex="1">Battle.net</a></th>
+                <th>Battle.net egy interaktív virtuális aréna, ahol az emberek online, a Blizzard Entertainment által készített játékokkal játszhatnak.</th>
+            </tr>
+            <tr class="tableLines">
+                <th><a href="https://www.origin.com" tabindex="1">Origin</a></th>
+                <th>Az Origin (korábban EA Store) egy digitális disztribúciós rendszer melyet az Electronic Arts üzemeltet és főként a kiadó játékai vásárolhatóak meg PC platformra, amiket az Origin kliensprogramjának segítségével tölthetnek le.</th>
+            </tr>
+        </table>
+    </div>
+    <div class="add-game-container" id="add-game-container">
+            <h2 class="game-title">Játék hozzáadása:</h2>
+            <div class="listTitle">Wanted List</div>
+            <div class="filter-box">
+                <form class="input_container">
+                    <label for = "gameName" class="input-label">Játék neve</label>
+                    <input id="gameName" class="o-input" type="text" required/>
+                    <p class="invalid-gameinput" id="empty-gameName"></p>
+                </form>
+                <form class="input_container">
+                    <label for="price" class="input-label">Játék ára</label>
+                    <input id="price" class="o-input" type="text" required/>
+                    <p class="invalid-gameinput" id="empty-price"></p>
+                </form>
+                <form class="input_container">
+                    <label for="store" class="input-label">virtuális Store</label>
+                    <input id="store" class="o-input" type="text" required/>
+                    <p class="invalid-gameinput" id="empty-store"></p>
+                <button class="new-game" onclick="drawNewGame()">Játék hozzáadása</button>
+            </div>
+        <div class="search_categories">
+            <div class="select">
+                <select name="search_categories" id="search_categories">
+                    <option value="1" selected="selected">Név szerint</option>
+                    <option value="2">Legalacsonyabb ár</option>
+                    <option value="3">Legmagasabb ár</option>
+                </select>
+            </div>
+        </div>
+        <div class="games-container" id="game-container"></div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="../logged-in/game.js"></script>
+    <script type="text/javascript" src="../index.js"></script>>
+</body>
+
+</html>

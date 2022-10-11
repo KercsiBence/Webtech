@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap');
+
+:root {
+    --main-color: rgb(81, 12, 70);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.banner{
+    background-image: url("../img/test.jpg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    height:18vmax;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+   padding: 0;
+    margin: 0;
+}
+#up-scroll{
+    height: 50px;
+    position:fixed;
+    right:0;
+    bottom:0;
+    margin:0;
+    padding:0;
+    z-index: 10;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+
+.divider {
+    margin: 20px !important;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 1px;
+}
+
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+}
+
+.main-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0 ), transparent);
+    width: 98vw;
+    height: 70vh;
+    position: relative;
+    display: grid;
+}
+
+.storeInfo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    display: block;
+    grid-column: 1;
+    grid-row: 1.2;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+.invalid-gameinput {
+    position: relative;
+    font-size: 12px;
+    color: red;
+    display: none;
+    margin: 0;
+}
+
+.input_container { 
+    position:relative;
+    padding:0;
+    margin:10px;
+    
+}
+.o-input{
+    width: 100%;
+}
+.new-game {
+    text-align: center;
+    list-style-type: none;
+    height: 50px;
+    width: 120px;
+    margin: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    background-color: black;
+    box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.75);
+
+}
+
+.new-game:hover {
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, -1px -3px 20px #CE5937;
+    cursor: pointer;
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    background-color: rgb(81, 12, 70);
+    overflow: hidden;
+
+}
+
+.search_categories {
+    grid-column: col1-end / col2-start;
+    grid-row: row1-start / row1-end;
+    justify-self: end;
+    font-size: 0.9rem;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 200px;
+    height: 40px;
+    margin-right: 18px;
+}
+.listTitle{
+    font-size: 20px;
+    font-weight: 600;
+    grid-column: col1-end / col2-start;
+    grid-row: row1-start / row1-end;
+    justify-self:center;
+}
+
+.search_categories .select {
+    width: 100%;
+}
+
+.search_categories .select select {
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+.add-game-container {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: [col1-start] 196px [col1-end] auto [col2-start] 10px;
+    grid-template-rows: [row1-start] 50px [row1-end] auto [row2-start];
+}
+
+.game-title {
+    grid-column: col1-start / col1-end;
+    grid-row: row1-start / row1-end;
+    color: #212529;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    justify-self: start;
+    align-self: center;
+    font-weight: 900;
+    margin: 20px;
+    text-align: center;
+}
+
+.c-filter-box__checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.filter-box {
+    grid-column: col1-start / col1-end;
+    grid-row: row1-end / row2-start;
+}
+
+.games-container {
+    grid-column: col1-end / col2-start;
+    grid-row: row1-end / row2-start;
+    margin-bottom: -60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.dynamic-game {
+    position: relative;
+    background-color: rgba(1, 78, 1, 0.462);
+    height: 350px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    padding: 0px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tooltip {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    bottom: 285px;
+    right: 105px;
+    background-image: url("../img/info-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 130px;
+    background-color: rgba(0, 0, 0, 0.803);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.game-item-img {
+    width: 160px;
+    margin-top: 15px;
+    background-image: url("../img/game-icon.png");
+}
+
+.game-price::after {
+    content: ' €';
+}
+
+.game-price {
+    margin-top: -10px;
+}
+
+.buy-item {
+    height: 39px;
+    margin: 0;
+    background-image: url("../img/shopping-cart.svg");
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+
+p.main-text:first-line {
+    color:var(--main-color);
+}
+
+  
+a {   
+    font-size: 11px;
+    color: black;   
+}
+
+a:active {
+    color: rgb(5, 82, 5);
+}
+
+a[tabindex]:focus {
+    color:rgb(5, 82, 5);
+    outline: none;
+}
+
+  .tableFirstLine{
+    color: black;
+    text-shadow: 2px 2px 4px var(--main-color);
+    font-size: large;
+    font-family: arial, sans-serif;
+  }
+  .tableLines{
+    font-size: 11px;
+    color: black;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 800px;
+  }
+  
+  td, th {
+    border: 1px solid #ff00ea;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #aaf0aabb;
+  }
+
+   
+@keyframes bigger {
+    0% {
+        font-size: 0px;
+    }
+
+    100% {
+        font-size: 70px;
+    }
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
